@@ -1,0 +1,35 @@
+{
+    "classes": [
+        "Boron Deficiency",
+        "Calcium Deficiency",
+        "Healthy",
+        "Iron Deficiency",
+        "Magnesium Deficiency",
+        "Manganese Deficiency",
+        "Potassium Deficiency",
+        "Sulphur Deficiency",
+        "Zinc Deficiency"
+    ],
+    "class_to_index": {
+        "Boron Deficiency": 0,
+        "Calcium Deficiency": 1,
+        "Healthy": 2,
+        "Iron Deficiency": 3,
+        "Magnesium Deficiency": 4,
+        "Manganese Deficiency": 5,
+        "Potassium Deficiency": 6,
+        "Sulphur Deficiency": 7,
+        "Zinc Deficiency": 8
+    },
+    "index_to_class": {
+        "0": "Boron Deficiency",
+        "1": "Calcium Deficiency",
+        "2": "Healthy",
+        "3": "Iron Deficiency",
+        "4": "Magnesium Deficiency",
+        "5": "Manganese Deficiency",
+        "6": "Potassium Deficiency",
+        "7": "Sulphur Deficiency",
+        "8": "Zinc Deficiency"
+    }
+}

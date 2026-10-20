@@ -1,0 +1,1833 @@
+[
+  {
+    "fieldId": "FIELD-1790016304594",
+    "createdAt": "2026-09-21T20:49:39.056424+00:00",
+    "updatedAt": "2026-09-21T20:49:39.056424+00:00",
+    "crop": "banana",
+    "plantCount": 4,
+    "location": {
+      "latitude": 12.903448206218666,
+      "longitude": 79.32886544489402
+    },
+    "weather": {
+      "temperature": 24.8,
+      "humidity": 90,
+      "rainfall_status": "none",
+      "condition": "Overcast",
+      "wind_speed": 10.8,
+      "source": "Open-Meteo"
+    },
+    "environment": {
+      "temperature": 24.8,
+      "humidity": 90,
+      "rainfall": "none",
+      "weatherCondition": "Overcast",
+      "windSpeed": 10.8,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Banana",
+        "disease": "Unknown",
+        "diseaseConfidence": 0,
+        "nutrient": "Healthy",
+        "nutrientConfidence": 88.81,
+        "overallConfidence": 88.81,
+        "status": "Potential health issue detected",
+        "latitude": 12.903448206218666,
+        "longitude": 79.32886544489402,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 90,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 10.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Banana",
+        "disease": "Unknown",
+        "diseaseConfidence": 0,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 44.81,
+        "overallConfidence": 44.81,
+        "status": "Requires verification",
+        "latitude": 12.903448206218666,
+        "longitude": 79.32886544489402,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 90,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 10.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Banana",
+        "disease": "Unknown",
+        "diseaseConfidence": 0,
+        "nutrient": "Boron Deficiency",
+        "nutrientConfidence": 74.04,
+        "overallConfidence": 74.04,
+        "status": "Potential health issue detected",
+        "latitude": 12.903448206218666,
+        "longitude": 79.32886544489402,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 90,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 10.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 4,
+        "imageName": null,
+        "crop": "Banana",
+        "disease": "Unknown",
+        "diseaseConfidence": 0,
+        "nutrient": "Potassium Deficiency",
+        "nutrientConfidence": 97.69,
+        "overallConfidence": 97.69,
+        "status": "Potential health issue detected",
+        "latitude": 12.903448206218666,
+        "longitude": 79.32886544489402,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 90,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 10.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-21T20:49:39.056424+00:00",
+        "event": "field_analysis",
+        "plantCount": 4,
+        "crop": "banana"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1790026796232",
+    "createdAt": "2026-09-21T21:39:53.716483+00:00",
+    "updatedAt": "2026-09-21T21:39:53.716483+00:00",
+    "crop": "maize",
+    "plantCount": 1,
+    "location": {
+      "latitude": 12.9038457,
+      "longitude": 79.3293176
+    },
+    "weather": {
+      "condition": "Overcast",
+      "humidity": 89,
+      "humidity_status": "very_high",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 24.8,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 3,
+      "wind_speed": 11.5,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 24.8,
+      "humidity": 89,
+      "rainfall": "none",
+      "weatherCondition": "Overcast",
+      "windSpeed": 11.5,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "maize",
+        "disease": "Maize Common Rust",
+        "diseaseConfidence": 75.75,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 26.69,
+        "overallConfidence": 26.69,
+        "status": "Requires verification",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.5,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-21T21:39:53.716483+00:00",
+        "event": "field_analysis",
+        "plantCount": 1,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1790027205458",
+    "createdAt": "2026-09-21T21:46:42.920566+00:00",
+    "updatedAt": "2026-09-21T21:46:42.920566+00:00",
+    "crop": "maize",
+    "plantCount": 4,
+    "location": {
+      "latitude": 12.9038457,
+      "longitude": 79.3293176
+    },
+    "weather": {
+      "condition": "Overcast",
+      "humidity": 89,
+      "humidity_status": "very_high",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 24.8,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 3,
+      "wind_speed": 11.7,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 24.8,
+      "humidity": 89,
+      "rainfall": "none",
+      "weatherCondition": "Overcast",
+      "windSpeed": 11.7,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Healthy",
+        "diseaseConfidence": 71.55,
+        "nutrient": "Potassium Deficiency",
+        "nutrientConfidence": 99.05,
+        "overallConfidence": 71.55,
+        "status": "Potential health issue detected",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Common Rust",
+        "diseaseConfidence": 75.75,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 26.69,
+        "overallConfidence": 26.69,
+        "status": "Requires verification",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Northern Leaf Blight",
+        "diseaseConfidence": 62.82,
+        "nutrient": "Healthy",
+        "nutrientConfidence": 71.84,
+        "overallConfidence": 62.82,
+        "status": "Potential health issue detected",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 4,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Leaf Blight",
+        "diseaseConfidence": 87.84,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 58.12,
+        "overallConfidence": 58.12,
+        "status": "Requires verification",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-21T21:46:42.920566+00:00",
+        "event": "field_analysis",
+        "plantCount": 4,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1790027295145",
+    "createdAt": "2026-09-21T21:48:12.625896+00:00",
+    "updatedAt": "2026-09-21T21:48:12.625896+00:00",
+    "crop": "maize",
+    "plantCount": 4,
+    "location": {
+      "latitude": 12.9038457,
+      "longitude": 79.3293176
+    },
+    "weather": {
+      "condition": "Overcast",
+      "humidity": 89,
+      "humidity_status": "very_high",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 24.8,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 3,
+      "wind_speed": 11.7,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 24.8,
+      "humidity": 89,
+      "rainfall": "none",
+      "weatherCondition": "Overcast",
+      "windSpeed": 11.7,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Healthy",
+        "diseaseConfidence": 71.55,
+        "nutrient": "Potassium Deficiency",
+        "nutrientConfidence": 99.05,
+        "overallConfidence": 71.55,
+        "status": "Potential health issue detected",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Common Rust",
+        "diseaseConfidence": 75.75,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 26.69,
+        "overallConfidence": 26.69,
+        "status": "Requires verification",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Northern Leaf Blight",
+        "diseaseConfidence": 62.82,
+        "nutrient": "Healthy",
+        "nutrientConfidence": 71.84,
+        "overallConfidence": 62.82,
+        "status": "Potential health issue detected",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 4,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Leaf Blight",
+        "diseaseConfidence": 87.84,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 58.12,
+        "overallConfidence": 58.12,
+        "status": "Requires verification",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-21T21:48:12.625896+00:00",
+        "event": "field_analysis",
+        "plantCount": 4,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1790027591836",
+    "createdAt": "2026-09-21T21:53:09.391769+00:00",
+    "updatedAt": "2026-09-21T21:53:09.391769+00:00",
+    "crop": "maize",
+    "plantCount": 4,
+    "location": {
+      "latitude": 12.9038457,
+      "longitude": 79.3293176
+    },
+    "weather": {
+      "condition": "Overcast",
+      "humidity": 89,
+      "humidity_status": "very_high",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 24.8,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 3,
+      "wind_speed": 11.7,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 24.8,
+      "humidity": 89,
+      "rainfall": "none",
+      "weatherCondition": "Overcast",
+      "windSpeed": 11.7,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Common Rust",
+        "diseaseConfidence": 75.75,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 26.69,
+        "overallConfidence": 26.69,
+        "status": "Requires verification",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Healthy",
+        "diseaseConfidence": 71.55,
+        "nutrient": "Potassium Deficiency",
+        "nutrientConfidence": 99.05,
+        "overallConfidence": 71.55,
+        "status": "Potential health issue detected",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Northern Leaf Blight",
+        "diseaseConfidence": 62.82,
+        "nutrient": "Healthy",
+        "nutrientConfidence": 71.84,
+        "overallConfidence": 62.82,
+        "status": "Potential health issue detected",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 4,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Leaf Blight",
+        "diseaseConfidence": 87.84,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 58.12,
+        "overallConfidence": 58.12,
+        "status": "Requires verification",
+        "latitude": 12.9038457,
+        "longitude": 79.3293176,
+        "environment": {
+          "temperature": 24.8,
+          "humidity": 89,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 11.7,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-21T21:53:09.391769+00:00",
+        "event": "field_analysis",
+        "plantCount": 4,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1790044044166",
+    "createdAt": "2026-09-22T02:27:22.206477+00:00",
+    "updatedAt": "2026-09-22T02:27:22.206477+00:00",
+    "crop": "maize",
+    "plantCount": 1,
+    "location": {
+      "latitude": 12.971007,
+      "longitude": 79.1644314
+    },
+    "weather": {
+      "condition": "Overcast",
+      "humidity": 81,
+      "humidity_status": "high",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 26.8,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 3,
+      "wind_speed": 15.1,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 26.8,
+      "humidity": 81,
+      "rainfall": "none",
+      "weatherCondition": "Overcast",
+      "windSpeed": 15.1,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Common Rust",
+        "diseaseConfidence": 75.75,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 26.69,
+        "overallConfidence": 26.69,
+        "status": "Requires verification",
+        "latitude": 12.971007,
+        "longitude": 79.1644314,
+        "environment": {
+          "temperature": 26.8,
+          "humidity": 81,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 15.1,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-22T02:27:22.206477+00:00",
+        "event": "field_analysis",
+        "plantCount": 1,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1790048314855",
+    "createdAt": "2026-09-22T03:38:32.934616+00:00",
+    "updatedAt": "2026-09-22T03:38:32.935162+00:00",
+    "crop": "maize",
+    "plantCount": 1,
+    "location": {
+      "latitude": 12.9713786,
+      "longitude": 79.1631426
+    },
+    "weather": {
+      "condition": "Overcast",
+      "humidity": 70,
+      "humidity_status": "high",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 28.7,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 3,
+      "wind_speed": 16.6,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 28.7,
+      "humidity": 70,
+      "rainfall": "none",
+      "weatherCondition": "Overcast",
+      "windSpeed": 16.6,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Common Rust",
+        "diseaseConfidence": 75.75,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 26.69,
+        "overallConfidence": 26.69,
+        "status": "Requires verification",
+        "latitude": 12.9713786,
+        "longitude": 79.1631426,
+        "environment": {
+          "temperature": 28.7,
+          "humidity": 70,
+          "rainfall": "none",
+          "weatherCondition": "Overcast",
+          "windSpeed": 16.6,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-22T03:38:32.935162+00:00",
+        "event": "field_analysis",
+        "plantCount": 1,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1790049146141",
+    "createdAt": "2026-09-22T03:52:24.242317+00:00",
+    "updatedAt": "2026-09-22T03:52:24.242317+00:00",
+    "crop": "maize",
+    "plantCount": 1,
+    "location": {
+      "latitude": 12.9710829,
+      "longitude": 79.1645534
+    },
+    "weather": {
+      "temperature": null,
+      "humidity": null,
+      "rainfall_status": null,
+      "condition": null,
+      "wind_speed": null
+    },
+    "environment": {
+      "temperature": null,
+      "humidity": null,
+      "rainfall": null,
+      "weatherCondition": null,
+      "windSpeed": null,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Common Rust",
+        "diseaseConfidence": 75.75,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 26.69,
+        "overallConfidence": 26.69,
+        "status": "Requires verification",
+        "latitude": 12.9710829,
+        "longitude": 79.1645534,
+        "environment": {
+          "temperature": null,
+          "humidity": null,
+          "rainfall": null,
+          "weatherCondition": null,
+          "windSpeed": null,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-22T03:52:24.242317+00:00",
+        "event": "field_analysis",
+        "plantCount": 1,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791712854041",
+    "createdAt": "2026-10-11T10:00:55.228024+00:00",
+    "updatedAt": "2026-10-11T10:00:55.228024+00:00",
+    "crop": "maize",
+    "plantCount": 1,
+    "location": {
+      "latitude": 12.9034082,
+      "longitude": 79.3291283
+    },
+    "weather": {
+      "condition": "Mainly clear",
+      "humidity": 41,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 32.9,
+      "temperature_status": "high",
+      "temperature_unit": "°C",
+      "weather_code": 1,
+      "wind_speed": 17,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 32.9,
+      "humidity": 41,
+      "rainfall": "none",
+      "weatherCondition": "Mainly clear",
+      "windSpeed": 17,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Gray Leaf Spot",
+        "diseaseConfidence": 72.95,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 63.22,
+        "overallConfidence": 63.22,
+        "status": "Potential health issue detected",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.9,
+          "humidity": 41,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T10:00:55.228024+00:00",
+        "event": "field_analysis",
+        "plantCount": 1,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791713590922",
+    "createdAt": "2026-10-11T10:13:12.171985+00:00",
+    "updatedAt": "2026-10-11T10:13:12.171985+00:00",
+    "crop": "maize",
+    "plantCount": 3,
+    "location": {
+      "latitude": 12.9034082,
+      "longitude": 79.3291283
+    },
+    "weather": {
+      "condition": "Mainly clear",
+      "humidity": 42,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 32.7,
+      "temperature_status": "high",
+      "temperature_unit": "°C",
+      "weather_code": 1,
+      "wind_speed": 17,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 32.7,
+      "humidity": 42,
+      "rainfall": "none",
+      "weatherCondition": "Mainly clear",
+      "windSpeed": 17,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 15.1,
+        "nutrient": "Potassium Deficiency",
+        "nutrientConfidence": 71.87,
+        "overallConfidence": 15.1,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.7,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 0.01,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 99.53,
+        "overallConfidence": 0.01,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.7,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 0.01,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 99.53,
+        "overallConfidence": 0.01,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.7,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T10:13:12.171985+00:00",
+        "event": "field_analysis",
+        "plantCount": 3,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791714086463",
+    "createdAt": "2026-10-11T10:21:27.777423+00:00",
+    "updatedAt": "2026-10-11T10:21:27.777423+00:00",
+    "crop": "maize",
+    "plantCount": 5,
+    "location": {
+      "latitude": 12.9034082,
+      "longitude": 79.3291283
+    },
+    "weather": {
+      "condition": "Mainly clear",
+      "humidity": 42,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 32.5,
+      "temperature_status": "high",
+      "temperature_unit": "°C",
+      "weather_code": 1,
+      "wind_speed": 16.8,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 32.5,
+      "humidity": 42,
+      "rainfall": "none",
+      "weatherCondition": "Mainly clear",
+      "windSpeed": 16.8,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 0.16,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 45.1,
+        "overallConfidence": 0.16,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.5,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 16.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Gray Leaf Spot",
+        "diseaseConfidence": 72.95,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 63.22,
+        "overallConfidence": 63.22,
+        "status": "Potential health issue detected",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.5,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 16.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 0.01,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 99.53,
+        "overallConfidence": 0.01,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.5,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 16.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 4,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 15.1,
+        "nutrient": "Potassium Deficiency",
+        "nutrientConfidence": 71.87,
+        "overallConfidence": 15.1,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.5,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 16.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 5,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 0.01,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 99.53,
+        "overallConfidence": 0.01,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 32.5,
+          "humidity": 42,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 16.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T10:21:27.777423+00:00",
+        "event": "field_analysis",
+        "plantCount": 5,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791716398237",
+    "createdAt": "2026-10-11T10:59:59.534232+00:00",
+    "updatedAt": "2026-10-11T10:59:59.534232+00:00",
+    "crop": "tomato",
+    "plantCount": 4,
+    "location": {
+      "latitude": 12.851502,
+      "longitude": 79.3868547
+    },
+    "weather": {
+      "condition": "Mainly clear",
+      "humidity": 44,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 32.1,
+      "temperature_status": "high",
+      "temperature_unit": "°C",
+      "weather_code": 1,
+      "wind_speed": 17.1,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 32.1,
+      "humidity": 44,
+      "rainfall": "none",
+      "weatherCondition": "Mainly clear",
+      "windSpeed": 17.1,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Tomato",
+        "disease": "Uncertain",
+        "diseaseConfidence": 46.48,
+        "nutrient": "Not evaluated",
+        "nutrientConfidence": 0,
+        "overallConfidence": 46.48,
+        "status": "Requires verification",
+        "latitude": 12.851502,
+        "longitude": 79.3868547,
+        "environment": {
+          "temperature": 32.1,
+          "humidity": 44,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17.1,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Tomato",
+        "disease": "Uncertain",
+        "diseaseConfidence": 44.68,
+        "nutrient": "Not evaluated",
+        "nutrientConfidence": 0,
+        "overallConfidence": 44.68,
+        "status": "Requires verification",
+        "latitude": 12.851502,
+        "longitude": 79.3868547,
+        "environment": {
+          "temperature": 32.1,
+          "humidity": 44,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17.1,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Tomato",
+        "disease": "Uncertain",
+        "diseaseConfidence": 15.33,
+        "nutrient": "Not evaluated",
+        "nutrientConfidence": 0,
+        "overallConfidence": 15.33,
+        "status": "Requires verification",
+        "latitude": 12.851502,
+        "longitude": 79.3868547,
+        "environment": {
+          "temperature": 32.1,
+          "humidity": 44,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17.1,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 4,
+        "imageName": null,
+        "crop": "Tomato",
+        "disease": "Uncertain",
+        "diseaseConfidence": 44.68,
+        "nutrient": "Not evaluated",
+        "nutrientConfidence": 0,
+        "overallConfidence": 44.68,
+        "status": "Requires verification",
+        "latitude": 12.851502,
+        "longitude": 79.3868547,
+        "environment": {
+          "temperature": 32.1,
+          "humidity": 44,
+          "rainfall": "none",
+          "weatherCondition": "Mainly clear",
+          "windSpeed": 17.1,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T10:59:59.534232+00:00",
+        "event": "field_analysis",
+        "plantCount": 4,
+        "crop": "tomato"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791720841932",
+    "createdAt": "2026-10-11T12:14:03.361276+00:00",
+    "updatedAt": "2026-10-11T12:14:03.361276+00:00",
+    "crop": "maize",
+    "plantCount": 2,
+    "location": {
+      "latitude": 12.9034082,
+      "longitude": 79.3291283
+    },
+    "weather": {
+      "condition": "Clear sky",
+      "humidity": 51,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 30.1,
+      "temperature_status": "high",
+      "temperature_unit": "°C",
+      "weather_code": 0,
+      "wind_speed": 14.1,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 30.1,
+      "humidity": 51,
+      "rainfall": "none",
+      "weatherCondition": "Clear sky",
+      "windSpeed": 14.1,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Gray Leaf Spot",
+        "diseaseConfidence": 72.95,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 63.22,
+        "overallConfidence": 63.22,
+        "status": "Potential health issue detected",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 30.1,
+          "humidity": 51,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 14.1,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 0.16,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 45.1,
+        "overallConfidence": 0.16,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 30.1,
+          "humidity": 51,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 14.1,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T12:14:03.361276+00:00",
+        "event": "field_analysis",
+        "plantCount": 2,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791721362881",
+    "createdAt": "2026-10-11T12:22:44.302066+00:00",
+    "updatedAt": "2026-10-11T12:22:44.302066+00:00",
+    "crop": "maize",
+    "plantCount": 2,
+    "location": {
+      "latitude": 12.9034082,
+      "longitude": 79.3291283
+    },
+    "weather": {
+      "condition": "Clear sky",
+      "humidity": 55,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 29.6,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 0,
+      "wind_speed": 13.3,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 29.6,
+      "humidity": 55,
+      "rainfall": "none",
+      "weatherCondition": "Clear sky",
+      "windSpeed": 13.3,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Gray Leaf Spot",
+        "diseaseConfidence": 72.95,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 63.22,
+        "overallConfidence": 63.22,
+        "status": "Potential health issue detected",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 29.6,
+          "humidity": 55,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 13.3,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Uncertain",
+        "diseaseConfidence": 0.16,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 45.1,
+        "overallConfidence": 0.16,
+        "status": "Requires verification",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 29.6,
+          "humidity": 55,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 13.3,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T12:22:44.302066+00:00",
+        "event": "field_analysis",
+        "plantCount": 2,
+        "crop": "maize"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791721871006",
+    "createdAt": "2026-10-11T12:31:12.486901+00:00",
+    "updatedAt": "2026-10-11T12:31:12.486901+00:00",
+    "crop": "banana",
+    "plantCount": 2,
+    "location": {
+      "latitude": 12.9038965,
+      "longitude": 79.3293377
+    },
+    "weather": {
+      "condition": "Clear sky",
+      "humidity": 57,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 29.2,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 0,
+      "wind_speed": 12.6,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 29.2,
+      "humidity": 57,
+      "rainfall": "none",
+      "weatherCondition": "Clear sky",
+      "windSpeed": 12.6,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Banana",
+        "disease": "Unknown",
+        "diseaseConfidence": 0,
+        "nutrient": "Potassium Deficiency",
+        "nutrientConfidence": 97.96,
+        "overallConfidence": 97.96,
+        "status": "Potential health issue detected",
+        "latitude": 12.9038965,
+        "longitude": 79.3293377,
+        "environment": {
+          "temperature": 29.2,
+          "humidity": 57,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 12.6,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Banana",
+        "disease": "Unknown",
+        "diseaseConfidence": 0,
+        "nutrient": "Uncertain",
+        "nutrientConfidence": 38.25,
+        "overallConfidence": 38.25,
+        "status": "Requires verification",
+        "latitude": 12.9038965,
+        "longitude": 79.3293377,
+        "environment": {
+          "temperature": 29.2,
+          "humidity": 57,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 12.6,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T12:31:12.486901+00:00",
+        "event": "field_analysis",
+        "plantCount": 2,
+        "crop": "banana"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1791721923379",
+    "createdAt": "2026-10-11T12:32:04.818934+00:00",
+    "updatedAt": "2026-10-11T12:32:04.818934+00:00",
+    "crop": "tomato",
+    "plantCount": 3,
+    "location": {
+      "latitude": 12.9038965,
+      "longitude": 79.3293377
+    },
+    "weather": {
+      "condition": "Clear sky",
+      "humidity": 57,
+      "humidity_status": "moderate",
+      "humidity_unit": "%",
+      "precipitation": 0,
+      "rain": 0,
+      "rainfall_status": "none",
+      "showers": 0,
+      "temperature": 29.2,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 0,
+      "wind_speed": 12.6,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 29.2,
+      "humidity": 57,
+      "rainfall": "none",
+      "weatherCondition": "Clear sky",
+      "windSpeed": 12.6,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Tomato",
+        "disease": "Uncertain",
+        "diseaseConfidence": 15.33,
+        "nutrient": "Not evaluated",
+        "nutrientConfidence": 0,
+        "overallConfidence": 15.33,
+        "status": "Requires verification",
+        "latitude": 12.9038965,
+        "longitude": 79.3293377,
+        "environment": {
+          "temperature": 29.2,
+          "humidity": 57,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 12.6,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 2,
+        "imageName": null,
+        "crop": "Tomato",
+        "disease": "Uncertain",
+        "diseaseConfidence": 44.68,
+        "nutrient": "Not evaluated",
+        "nutrientConfidence": 0,
+        "overallConfidence": 44.68,
+        "status": "Requires verification",
+        "latitude": 12.9038965,
+        "longitude": 79.3293377,
+        "environment": {
+          "temperature": 29.2,
+          "humidity": 57,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 12.6,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      },
+      {
+        "id": 3,
+        "imageName": null,
+        "crop": "Tomato",
+        "disease": "Uncertain",
+        "diseaseConfidence": 44.68,
+        "nutrient": "Not evaluated",
+        "nutrientConfidence": 0,
+        "overallConfidence": 44.68,
+        "status": "Requires verification",
+        "latitude": 12.9038965,
+        "longitude": 79.3293377,
+        "environment": {
+          "temperature": 29.2,
+          "humidity": 57,
+          "rainfall": "none",
+          "weatherCondition": "Clear sky",
+          "windSpeed": 12.6,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-11T12:32:04.818934+00:00",
+        "event": "field_analysis",
+        "plantCount": 3,
+        "crop": "tomato"
+      }
+    ]
+  },
+  {
+    "fieldId": "FIELD-1792250192939",
+    "createdAt": "2026-10-17T15:16:30.933134+00:00",
+    "updatedAt": "2026-10-17T15:16:30.933134+00:00",
+    "crop": "maize",
+    "plantCount": 1,
+    "location": {
+      "latitude": 12.9034082,
+      "longitude": 79.3291283
+    },
+    "weather": {
+      "condition": "Light drizzle",
+      "humidity": 96,
+      "humidity_status": "very_high",
+      "humidity_unit": "%",
+      "precipitation": 0.1,
+      "rain": 0.1,
+      "rainfall_status": "low",
+      "showers": 0,
+      "temperature": 24.2,
+      "temperature_status": "moderate",
+      "temperature_unit": "°C",
+      "weather_code": 51,
+      "wind_speed": 1.8,
+      "wind_speed_unit": "km/h"
+    },
+    "environment": {
+      "temperature": 24.2,
+      "humidity": 96,
+      "rainfall": "low",
+      "weatherCondition": "Light drizzle",
+      "windSpeed": 1.8,
+      "soilCondition": "unknown",
+      "soilPH": null,
+      "irrigation": "unknown",
+      "growthStage": "vegetative"
+    },
+    "plants": [
+      {
+        "id": 1,
+        "imageName": null,
+        "crop": "Maize",
+        "disease": "Maize Gray Leaf Spot",
+        "diseaseConfidence": 72.99,
+        "nutrient": "Phosphorus Deficiency",
+        "nutrientConfidence": 63.22,
+        "overallConfidence": 63.22,
+        "status": "Potential health issue detected",
+        "latitude": 12.9034082,
+        "longitude": 79.3291283,
+        "environment": {
+          "temperature": 24.2,
+          "humidity": 96,
+          "rainfall": "low",
+          "weatherCondition": "Light drizzle",
+          "windSpeed": 1.8,
+          "soilCondition": "unknown",
+          "soilPH": null,
+          "irrigation": "unknown",
+          "growthStage": "vegetative"
+        }
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-10-17T15:16:30.933134+00:00",
+        "event": "field_analysis",
+        "plantCount": 1,
+        "crop": "maize"
+      }
+    ]
+  }
+]

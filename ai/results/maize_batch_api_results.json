@@ -1,0 +1,102 @@
+[
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\1.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Healthy",
+        "disease_confidence": 44.57,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 54.91,
+        "overall_status": "Healthy"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\10.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Maize Leaf Blight",
+        "disease_confidence": 37.6,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 82.33,
+        "overall_status": "Requires verification"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\11.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Healthy",
+        "disease_confidence": 67.28,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 46.57,
+        "overall_status": "Healthy"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\12.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Healthy",
+        "disease_confidence": 67.77,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 90.61,
+        "overall_status": "Healthy"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\13.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Healthy",
+        "disease_confidence": 82.86,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 77.29,
+        "overall_status": "Healthy"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\14.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Healthy",
+        "disease_confidence": 94.01,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 58.12,
+        "overall_status": "Healthy"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\15.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Maize Northern Leaf Blight",
+        "disease_confidence": 62.16,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 88.01,
+        "overall_status": "Potential health issue detected"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\16.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Maize Leaf Blight",
+        "disease_confidence": 89.66,
+        "nutrient": "Magnesium Deficiency",
+        "nutrient_confidence": 36.26,
+        "overall_status": "Requires verification"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\17.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Healthy",
+        "disease_confidence": 74.25,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 93.7,
+        "overall_status": "Healthy"
+    },
+    {
+        "image": "D:\\AI_Crop_Health_AR_DigitalTwin\\datasets\\raw\\Maize_Nutrient\\Maize Nutrient Deficiency Dataset\\Helathy\\18.jpeg",
+        "success": true,
+        "http_status": 200,
+        "disease": "Maize Common Rust",
+        "disease_confidence": 37.06,
+        "nutrient": "Healthy",
+        "nutrient_confidence": 53.18,
+        "overall_status": "Requires verification"
+    }
+]

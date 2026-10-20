@@ -1,0 +1,20 @@
+{
+    "model": "MobileNetV3Small",
+    "dataset": "Maize Nutrient",
+    "test_images": 70,
+    "num_classes": 5,
+    "accuracy": 0.8,
+    "macro_precision": 0.7593765711412771,
+    "macro_recall": 0.7665583075335397,
+    "macro_f1": 0.7605079869785751,
+    "weighted_precision": 0.807936507936508,
+    "weighted_recall": 0.8,
+    "weighted_f1": 0.8017858494749251,
+    "classes": [
+        "Healthy",
+        "Magnesium Deficiency",
+        "Nitrogen Deficiency",
+        "Phosphorus Deficiency",
+        "Potassium Deficiency"
+    ]
+}

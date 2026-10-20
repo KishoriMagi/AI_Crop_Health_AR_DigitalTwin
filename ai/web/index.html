@@ -1,0 +1,3483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Crop Health & Digital Twin</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+            background: #f4f7f4;
+            color: #1f2937;
+        }
+
+
+        header {
+            background: #166534;
+            color: white;
+            padding: 22px;
+            text-align: center;
+        }
+
+
+        header h1 {
+            font-size: 28px;
+        }
+
+
+        header p {
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 25px auto;
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+
+        .card h2 {
+            color: #166534;
+            margin-bottom: 18px;
+        }
+
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+            padding: 11px;
+
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+
+            font-size: 14px;
+        }
+
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        input[type="file"] {
+            padding: 10px;
+            background: #f9fafb;
+        }
+
+
+        button {
+
+            border: none;
+            border-radius: 7px;
+
+            padding: 12px 18px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+        }
+
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+
+        .primary {
+
+            background: #166534;
+            color: white;
+
+            width: 100%;
+        }
+
+
+        .primary:hover {
+            background: #14532d;
+        }
+
+
+        .secondary {
+            background: #2563eb;
+            color: white;
+        }
+
+
+        .location {
+            background: #0369a1;
+            color: white;
+            width: 100%;
+        }
+
+
+        .status {
+
+            margin-top: 15px;
+
+            padding: 12px;
+
+            border-radius: 7px;
+
+            background: #f3f4f6;
+
+            display: none;
+        }
+
+
+        .preview {
+
+            width: 100%;
+
+            max-height: 350px;
+
+            object-fit: contain;
+
+            margin-top: 15px;
+
+            border-radius: 10px;
+
+            display: none;
+        }
+
+
+        .result {
+            display: none;
+        }
+
+
+        .result-box {
+
+            background: #f8fafc;
+
+            border-left: 5px solid #166534;
+
+            padding: 15px;
+
+            margin-top: 12px;
+
+            border-radius: 5px;
+        }
+
+
+        .warning {
+
+            border-left-color: #d97706;
+
+            background: #fffbeb;
+        }
+
+
+        .danger-box {
+
+            border-left-color: #dc2626;
+
+            background: #fef2f2;
+        }
+
+
+        .success-box {
+
+            border-left-color: #16a34a;
+
+            background: #f0fdf4;
+        }
+
+
+        .confidence {
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+            color: #166534;
+
+            margin-top: 5px;
+        }
+
+
+        .recommendations li {
+
+            margin: 10px 0;
+
+            margin-left: 25px;
+
+            line-height: 1.5;
+        }
+
+
+        .weather-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .weather-item {
+
+            background: #f0fdf4;
+
+            padding: 18px;
+
+            border-radius: 9px;
+
+            text-align: center;
+        }
+
+
+        .weather-label {
+            font-size: 16px;
+        }
+
+
+        .weather-value {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            margin-top: 8px;
+        }
+
+
+        .context-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .context-item {
+
+            background: #f0fdf4;
+
+            padding: 18px;
+
+            border-radius: 9px;
+
+            text-align: center;
+        }
+
+
+        .context-label {
+            font-size: 15px;
+        }
+
+
+        .context-value {
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            margin-top: 7px;
+        }
+
+
+        .digital-twin {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ecfdf5,
+                    #f0fdf4
+                );
+
+            border: 2px solid #86efac;
+        }
+
+
+        .twin-placeholder {
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: #4b5563;
+        }
+
+
+        .loading {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 15px;
+
+            color: #166534;
+
+            font-weight: bold;
+        }
+
+
+        .small {
+
+            color: #6b7280;
+
+            font-size: 13px;
+
+            margin-top: 5px;
+        }
+
+
+        .coordinates {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 10px;
+        }
+
+
+        .status-good {
+            color: #166534;
+            font-weight: bold;
+        }
+
+
+        .status-warning {
+            color: #b45309;
+            font-weight: bold;
+        }
+
+
+        .status-danger {
+            color: #b91c1c;
+            font-weight: bold;
+        }
+
+
+        @media (max-width: 800px) {
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .weather-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .context-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .weather-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .context-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        🌱 AI Crop Health & Digital Twin
+    </h1>
+
+    <p>
+        AI-assisted crop health monitoring,
+        real-time environmental context and
+        digital twin generation
+    </p>
+
+</header>
+
+
+
+<div class="container">
+
+
+    <!-- =====================================================
+         INPUT
+    ====================================================== -->
+
+    <div class="grid">
+
+
+        <!-- CROP INPUT -->
+
+        <div class="card">
+
+            <h2>
+                📷 Crop Input
+            </h2>
+
+
+            <label>
+                Crop
+            </label>
+
+
+            <select id="crop">
+
+                <option value="apple">
+                    Apple
+                </option>
+
+                <option value="banana">
+                    Banana
+                </option>
+
+                <option value="bell pepper">
+                    Bell Pepper
+                </option>
+
+                <option value="blueberry">
+                    Blueberry
+                </option>
+
+                <option value="cherry">
+                    Cherry
+                </option>
+
+                <option value="corn (maize)">
+                    Corn / Maize
+                </option>
+
+                <option value="grape">
+                    Grape
+                </option>
+
+                <option value="orange">
+                    Orange
+                </option>
+
+                <option value="peach">
+                    Peach
+                </option>
+
+                <option value="potato">
+                    Potato
+                </option>
+
+                <option value="rice">
+                    Rice
+                </option>
+
+                <option value="squash">
+                    Squash
+                </option>
+
+                <option value="strawberry">
+                    Strawberry
+                </option>
+
+                <option value="tomato">
+                    Tomato
+                </option>
+
+            </select>
+
+
+
+            <label>
+                Upload Crop Image
+            </label>
+
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/jpeg,image/png,image/webp"
+            >
+
+
+            <p class="small">
+
+                Laptop testing:
+                upload a clear crop/leaf image.
+
+            </p>
+
+
+            <img
+                id="imagePreview"
+                class="preview"
+                alt="Crop preview"
+            >
+
+
+            <label>
+                Visible Symptoms
+            </label>
+
+
+            <textarea
+                id="symptoms"
+                rows="3"
+                placeholder="Example: small brown spots on leaves"
+            ></textarea>
+
+        </div>
+
+
+
+        <!-- FARM CONTEXT -->
+
+        <div class="card">
+
+            <h2>
+                🌱 Crop Context
+            </h2>
+
+
+            <label>
+                Growth Stage
+            </label>
+
+
+            <select id="growthStage">
+
+                <option value="seedling">
+                    Seedling
+                </option>
+
+                <option
+                    value="vegetative"
+                    selected
+                >
+                    Vegetative
+                </option>
+
+                <option value="flowering">
+                    Flowering
+                </option>
+
+                <option value="fruiting">
+                    Fruiting
+                </option>
+
+                <option value="maturity">
+                    Maturity
+                </option>
+
+            </select>
+
+
+
+            <label>
+                Soil Condition
+            </label>
+
+
+            <select id="soilCondition">
+
+                <option value="dry">
+                    Dry
+                </option>
+
+                <option
+                    value="moist"
+                    selected
+                >
+                    Moist
+                </option>
+
+                <option value="wet">
+                    Wet
+                </option>
+
+                <option value="waterlogged">
+                    Waterlogged
+                </option>
+
+            </select>
+
+
+
+            <label>
+                Soil pH
+            </label>
+
+
+            <input
+                type="number"
+                id="soilPH"
+                value="6.5"
+                min="0"
+                max="14"
+                step="0.1"
+            >
+
+
+
+            <label>
+                Irrigation
+            </label>
+
+
+            <select id="irrigation">
+
+                <option value="low">
+                    Low
+                </option>
+
+                <option
+                    value="normal"
+                    selected
+                >
+                    Normal
+                </option>
+
+                <option value="high">
+                    High
+                </option>
+
+            </select>
+
+
+
+            <button
+                class="location"
+                onclick="getLocation()"
+            >
+                📍 Get My Location & Weather
+            </button>
+
+
+            <div class="coordinates">
+
+                <div>
+
+                    <label>
+                        Latitude
+                    </label>
+
+                    <input
+                        id="latitude"
+                        readonly
+                        placeholder="--"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Longitude
+                    </label>
+
+                    <input
+                        id="longitude"
+                        readonly
+                        placeholder="--"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="locationStatus"
+                class="small"
+            >
+                Location not obtained
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         STATUS
+    ====================================================== -->
+
+    <div
+        id="status"
+        class="status"
+    ></div>
+
+
+    <div
+        id="loading"
+        class="loading"
+    >
+
+        ⏳ Analyzing crop using AI and
+        environmental context...
+
+    </div>
+
+
+
+    <!-- =====================================================
+         REAL TIME WEATHER
+    ====================================================== -->
+
+    <div class="card">
+
+        <h2>
+            🌦️ Real-Time Weather
+        </h2>
+
+
+        <div class="weather-grid">
+
+
+            <div class="weather-item">
+
+                <div class="weather-label">
+                    Temperature
+                </div>
+
+                <div
+                    id="temperature"
+                    class="weather-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="weather-item">
+
+                <div class="weather-label">
+                    Humidity
+                </div>
+
+                <div
+                    id="humidity"
+                    class="weather-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="weather-item">
+
+                <div class="weather-label">
+                    Rainfall
+                </div>
+
+                <div
+                    id="rainfall"
+                    class="weather-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="weather-item">
+
+                <div class="weather-label">
+                    Condition
+                </div>
+
+                <div
+                    id="weatherCondition"
+                    class="weather-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="weather-item">
+
+                <div class="weather-label">
+                    Wind
+                </div>
+
+                <div
+                    id="wind"
+                    class="weather-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="weather-item">
+
+                <div class="weather-label">
+                    Location
+                </div>
+
+                <div
+                    id="locationWeatherStatus"
+                    class="weather-value"
+                >
+                    Waiting
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ANALYZE BUTTON
+    ====================================================== -->
+
+    <div class="card">
+
+        <h2>
+            🤖 AI Analysis
+        </h2>
+
+
+        <button
+            id="analyzeButton"
+            class="primary"
+            onclick="analyzeCrop()"
+        >
+
+            🔍 Analyze Crop
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         RESULT
+    ====================================================== -->
+
+    <div
+        id="result"
+        class="result"
+    >
+
+
+        <!-- AI RESULT -->
+
+        <div class="card">
+
+            <h2>
+                🧠 AI Disease Assessment
+            </h2>
+
+
+            <div class="result-box">
+
+                <p>
+                    <strong>
+                        Crop:
+                    </strong>
+                </p>
+
+                <h3 id="resultCrop">
+                    --
+                </h3>
+
+
+                <br>
+
+
+                <p>
+                    <strong>
+                        Visual Prediction:
+                    </strong>
+                </p>
+
+                <h3 id="diseaseName">
+                    --
+                </h3>
+
+
+                <p
+                    id="diseaseStatus"
+                    class="small"
+                >
+                    --
+                </p>
+
+
+                <br>
+
+
+                <p>
+                    Confidence
+                </p>
+
+
+                <div
+                    id="confidence"
+                    class="confidence"
+                >
+                    --
+                </div>
+
+
+                <p>
+                    Confidence Level:
+                    <strong id="confidenceLevel">
+                        --
+                    </strong>
+                </p>
+
+
+                <br>
+
+
+                <p>
+                    Assessment:
+                </p>
+
+
+                <p
+                    id="assessmentStatus"
+                    class="status-good"
+                >
+                    --
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONTEXT RESULT
+        ================================================== -->
+
+        <div class="card">
+
+            <h2>
+                🌍 Context Analysis
+            </h2>
+
+
+            <div class="context-grid">
+
+
+                <div class="context-item">
+
+                    <div class="context-label">
+                        Temperature
+                    </div>
+
+                    <div
+                        id="resultTemperature"
+                        class="context-value"
+                    >
+                        --
+                    </div>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <div class="context-label">
+                        Humidity
+                    </div>
+
+                    <div
+                        id="resultHumidity"
+                        class="context-value"
+                    >
+                        --
+                    </div>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <div class="context-label">
+                        Rainfall
+                    </div>
+
+                    <div
+                        id="resultRainfall"
+                        class="context-value"
+                    >
+                        --
+                    </div>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <div class="context-label">
+                        Soil
+                    </div>
+
+                    <div
+                        id="resultSoil"
+                        class="context-value"
+                    >
+                        --
+                    </div>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <div class="context-label">
+                        Soil pH
+                    </div>
+
+                    <div
+                        id="resultPH"
+                        class="context-value"
+                    >
+                        --
+                    </div>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <div class="context-label">
+                        Growth Stage
+                    </div>
+
+                    <div
+                        id="resultGrowth"
+                        class="context-value"
+                    >
+                        --
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <p>
+                    <strong>
+                        Location:
+                    </strong>
+                </p>
+
+                <p id="resultLocation">
+                    --
+                </p>
+
+
+                <br>
+
+
+                <p>
+                    <strong>
+                        Irrigation:
+                    </strong>
+                </p>
+
+                <p id="resultIrrigation">
+                    --
+                </p>
+
+
+                <br>
+
+
+                <p>
+                    <strong>
+                        Weather Condition:
+                    </strong>
+                </p>
+
+                <p id="resultCondition">
+                    --
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             RECOMMENDATIONS
+        ================================================== -->
+
+        <div class="card">
+
+            <h2>
+                💡 Context-Aware Recommendations
+            </h2>
+
+
+            <div
+                id="recommendationAssessment"
+                class="result-box"
+            >
+
+                Waiting for AI assessment...
+
+            </div>
+
+
+            <div
+                id="recommendationContext"
+                class="result-box"
+            >
+
+            </div>
+
+
+            <h3 style="margin-top:20px; color:#166534;">
+                Recommended Actions
+            </h3>
+
+
+            <ol
+                id="recommendationList"
+                class="recommendations"
+            >
+            </ol>
+
+
+            <div
+                class="result-box warning"
+            >
+
+                <strong>
+                    ⚠️ Important
+                </strong>
+
+
+                <p style="margin-top:8px;">
+
+                    This is an AI-assisted decision
+                    support system. It does not establish
+                    a confirmed agricultural diagnosis.
+                    Verify important results before
+                    treatment decisions.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             DIGITAL TWIN
+        ================================================== -->
+
+        <div class="card digital-twin">
+
+            <h2>
+                🌱 Digital Twin
+            </h2>
+
+
+            <div id="digitalTwin">
+
+                <div class="twin-placeholder">
+
+                    <h3>
+                        Crop Digital Twin
+                    </h3>
+
+
+                    <p style="margin-top:10px;">
+
+                        Analyze the crop first,
+                        then create its digital twin.
+
+                    </p>
+
+
+                    <button
+                        class="secondary"
+                        onclick="createDigitalTwin()"
+                    >
+
+                        ➕ Create Digital Twin
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================================
+   CONFIGURATION
+========================================================= */
+
+const API_URL =
+    "http://127.0.0.1:5000";
+
+
+let selectedFile = null;
+
+let lastPrediction = null;
+
+let currentLocation = null;
+
+let currentWeather = null;
+
+
+
+/* =========================================================
+   INITIALIZATION
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        const input =
+            document.getElementById(
+                "imageInput"
+            );
+
+
+        input.addEventListener(
+            "change",
+            handleFile
+        );
+
+
+        /*
+         * Automatically request location
+         * when page loads.
+         */
+        setTimeout(
+            function() {
+
+                getLocation();
+
+            },
+            500
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   FILE
+========================================================= */
+
+function handleFile(event) {
+
+    const file =
+        event.target.files[0];
+
+
+    if (!file) {
+        return;
+    }
+
+
+    selectedFile = file;
+
+
+    const preview =
+        document.getElementById(
+            "imagePreview"
+        );
+
+
+    const url =
+        URL.createObjectURL(file);
+
+
+    preview.src = url;
+
+    preview.style.display =
+        "block";
+
+
+    showStatus(
+        "Crop image selected successfully.",
+        false
+    );
+}
+
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+function getLocation() {
+
+    if (!navigator.geolocation) {
+
+        showStatus(
+            "Geolocation is not supported by this browser.",
+            true
+        );
+
+        return;
+    }
+
+
+    showStatus(
+        "Getting your location...",
+        false
+    );
+
+
+    navigator.geolocation.getCurrentPosition(
+
+        async function(position) {
+
+            const latitude =
+                position.coords.latitude;
+
+
+            const longitude =
+                position.coords.longitude;
+
+
+            currentLocation = {
+
+                latitude:
+                    latitude,
+
+                longitude:
+                    longitude
+
+            };
+
+
+            document.getElementById(
+                "latitude"
+            ).value =
+                latitude.toFixed(6);
+
+
+            document.getElementById(
+                "longitude"
+            ).value =
+                longitude.toFixed(6);
+
+
+            document.getElementById(
+                "locationStatus"
+            ).innerText =
+                "Location ready";
+
+
+            document.getElementById(
+                "locationWeatherStatus"
+            ).innerText =
+                "Loading...";
+
+
+            showStatus(
+                "Location obtained. Retrieving real-time weather...",
+                false
+            );
+
+
+            await loadWeather(
+                latitude,
+                longitude
+            );
+
+        },
+
+
+        function(error) {
+
+            console.error(
+                "Location error:",
+                error
+            );
+
+
+            showStatus(
+                "Location permission was not granted. Please allow location access.",
+                true
+            );
+
+        },
+
+
+        {
+
+            enableHighAccuracy:
+                true,
+
+            timeout:
+                15000,
+
+            maximumAge:
+                300000
+
+        }
+
+    );
+
+}
+
+
+
+/* =========================================================
+   WEATHER
+========================================================= */
+
+async function loadWeather(
+    latitude,
+    longitude
+) {
+
+    try {
+
+        console.log(
+            "Requesting weather:",
+            latitude,
+            longitude
+        );
+
+
+        /*
+         * First try Flask weather endpoint.
+         */
+        let response;
+
+
+        try {
+
+            response =
+                await fetch(
+                    `${API_URL}/api/weather?latitude=${latitude}&longitude=${longitude}`,
+                    {
+                        method:
+                            "GET",
+
+                        cache:
+                            "no-store"
+                    }
+                );
+
+        }
+        catch (backendError) {
+
+            console.warn(
+                "Backend weather request failed. Trying Open-Meteo directly."
+            );
+
+        }
+
+
+        /*
+         * If Flask weather endpoint works.
+         */
+        if (
+            response &&
+            response.ok
+        ) {
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "Backend weather response:",
+                data
+            );
+
+
+            normalizeWeather(
+                data
+            );
+
+
+            return currentWeather;
+        }
+
+
+        /*
+         * Direct Open-Meteo fallback.
+         */
+        const openMeteoURL =
+            "https://api.open-meteo.com/v1/forecast" +
+            `?latitude=${latitude}` +
+            `&longitude=${longitude}` +
+            "&current=temperature_2m,relative_humidity_2m,precipitation,rain,showers,weather_code,wind_speed_10m" +
+            "&timezone=auto";
+
+
+        const weatherResponse =
+            await fetch(
+                openMeteoURL,
+                {
+                    method:
+                        "GET",
+
+                    cache:
+                        "no-store"
+                }
+            );
+
+
+        if (!weatherResponse.ok) {
+
+            throw new Error(
+                "Weather service unavailable."
+            );
+        }
+
+
+        const weatherData =
+            await weatherResponse.json();
+
+
+        console.log(
+            "Open-Meteo response:",
+            weatherData
+        );
+
+
+        normalizeWeather(
+            weatherData
+        );
+
+
+        return currentWeather;
+
+    }
+    catch(error) {
+
+        console.error(
+            "Weather retrieval failed:",
+            error
+        );
+
+
+        currentWeather =
+            null;
+
+
+        showWeatherError();
+
+
+        showStatus(
+            "Could not retrieve real-time weather.",
+            true
+        );
+
+
+        return null;
+    }
+
+}
+
+
+
+/* =========================================================
+   NORMALIZE WEATHER
+========================================================= */
+
+function normalizeWeather(data) {
+
+    /*
+     * Backend may return:
+     *
+     * data.weather
+     *
+     * or:
+     *
+     * data.current
+     *
+     * or direct fields.
+     */
+
+    const weather =
+        data.weather ||
+        data.current ||
+        data;
+
+
+    const temperature =
+        weather.temperature ??
+        weather.temperature_2m ??
+        null;
+
+
+    const humidity =
+        weather.humidity ??
+        weather.relative_humidity_2m ??
+        null;
+
+
+    const precipitation =
+        weather.precipitation ??
+        0;
+
+
+    const rain =
+        weather.rain ??
+        0;
+
+
+    const showers =
+        weather.showers ??
+        0;
+
+
+    const wind =
+        weather.wind_speed ??
+        weather.wind_speed_10m ??
+        null;
+
+
+    const weatherCode =
+        weather.weather_code ??
+        null;
+
+
+    const condition =
+        weather.condition ||
+        weather.weather_condition ||
+        getWeatherCondition(
+            weatherCode
+        );
+
+
+    const recentRainfall =
+        weather.recent_rainfall ||
+        getRainfallStatus(
+            precipitation,
+            rain,
+            showers
+        );
+
+
+    currentWeather = {
+
+        temperature:
+            temperature,
+
+        humidity:
+            humidity,
+
+        precipitation:
+            precipitation,
+
+        rain:
+            rain,
+
+        showers:
+            showers,
+
+        wind_speed:
+            wind,
+
+        weather_code:
+            weatherCode,
+
+        condition:
+            condition,
+
+        recent_rainfall:
+            recentRainfall
+    };
+
+
+    console.log(
+        "Normalized weather:",
+        currentWeather
+    );
+
+
+    updateWeatherUI(
+        currentWeather
+    );
+
+
+    showStatus(
+        "Real-time weather loaded successfully.",
+        false
+    );
+
+}
+
+
+
+/* =========================================================
+   WEATHER CONDITION
+========================================================= */
+
+function getWeatherCondition(code) {
+
+    const conditions = {
+
+        0:
+            "Clear sky",
+
+        1:
+            "Mainly clear",
+
+        2:
+            "Partly cloudy",
+
+        3:
+            "Overcast",
+
+        45:
+            "Fog",
+
+        48:
+            "Rime fog",
+
+        51:
+            "Light drizzle",
+
+        53:
+            "Moderate drizzle",
+
+        55:
+            "Dense drizzle",
+
+        61:
+            "Slight rain",
+
+        63:
+            "Moderate rain",
+
+        65:
+            "Heavy rain",
+
+        71:
+            "Slight snow",
+
+        73:
+            "Moderate snow",
+
+        75:
+            "Heavy snow",
+
+        80:
+            "Rain showers",
+
+        81:
+            "Moderate rain showers",
+
+        82:
+            "Heavy rain showers",
+
+        95:
+            "Thunderstorm",
+
+        96:
+            "Thunderstorm with hail",
+
+        99:
+            "Thunderstorm with heavy hail"
+
+    };
+
+
+    return conditions[code] ||
+        "--";
+}
+
+
+
+/* =========================================================
+   RAINFALL STATUS
+========================================================= */
+
+function getRainfallStatus(
+    precipitation,
+    rain,
+    showers
+) {
+
+    const value =
+        Number(precipitation || 0) +
+        Number(rain || 0) +
+        Number(showers || 0);
+
+
+    if (value <= 0) {
+
+        return "none";
+    }
+
+
+    if (value < 2.5) {
+
+        return "low";
+    }
+
+
+    if (value < 10) {
+
+        return "moderate";
+    }
+
+
+    return "high";
+}
+
+
+
+/* =========================================================
+   WEATHER UI
+========================================================= */
+
+function updateWeatherUI(weather) {
+
+    const temperature =
+        document.getElementById(
+            "temperature"
+        );
+
+
+    const humidity =
+        document.getElementById(
+            "humidity"
+        );
+
+
+    const rainfall =
+        document.getElementById(
+            "rainfall"
+        );
+
+
+    const condition =
+        document.getElementById(
+            "weatherCondition"
+        );
+
+
+    const wind =
+        document.getElementById(
+            "wind"
+        );
+
+
+    const locationStatus =
+        document.getElementById(
+            "locationWeatherStatus"
+        );
+
+
+    if (
+        weather.temperature !== null &&
+        weather.temperature !== undefined
+    ) {
+
+        temperature.innerText =
+            Number(
+                weather.temperature
+            ).toFixed(1) +
+            " °C";
+
+    }
+    else {
+
+        temperature.innerText =
+            "--";
+
+    }
+
+
+
+    if (
+        weather.humidity !== null &&
+        weather.humidity !== undefined
+    ) {
+
+        humidity.innerText =
+            Number(
+                weather.humidity
+            ).toFixed(0) +
+            " %";
+
+    }
+    else {
+
+        humidity.innerText =
+            "--";
+
+    }
+
+
+
+    rainfall.innerText =
+        Number(
+            weather.precipitation || 0
+        ).toFixed(1) +
+        " mm";
+
+
+
+    condition.innerText =
+        weather.condition ||
+        "--";
+
+
+
+    if (
+        weather.wind_speed !== null &&
+        weather.wind_speed !== undefined
+    ) {
+
+        wind.innerText =
+            Number(
+                weather.wind_speed
+            ).toFixed(1) +
+            " km/h";
+
+    }
+    else {
+
+        wind.innerText =
+            "--";
+
+    }
+
+
+
+    if (currentLocation) {
+
+        locationStatus.innerText =
+            "Location ready";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   WEATHER ERROR
+========================================================= */
+
+function showWeatherError() {
+
+    document.getElementById(
+        "temperature"
+    ).innerText =
+        "Unavailable";
+
+
+    document.getElementById(
+        "humidity"
+    ).innerText =
+        "Unavailable";
+
+
+    document.getElementById(
+        "rainfall"
+    ).innerText =
+        "Unavailable";
+
+
+    document.getElementById(
+        "weatherCondition"
+    ).innerText =
+        "Unavailable";
+
+
+    document.getElementById(
+        "wind"
+    ).innerText =
+        "Unavailable";
+
+
+    document.getElementById(
+        "locationWeatherStatus"
+    ).innerText =
+        "Weather unavailable";
+}
+
+
+
+/* =========================================================
+   ANALYZE CROP
+========================================================= */
+
+async function analyzeCrop() {
+
+    if (!selectedFile) {
+
+        showStatus(
+            "Please upload a crop image first.",
+            true
+        );
+
+        return;
+    }
+
+
+    if (!currentLocation) {
+
+        showStatus(
+            "Please allow location access first.",
+            true
+        );
+
+        getLocation();
+
+        return;
+    }
+
+
+    /*
+     * Make sure weather exists.
+     */
+    if (!currentWeather) {
+
+        showStatus(
+            "Retrieving real-time weather...",
+            false
+        );
+
+
+        await loadWeather(
+            currentLocation.latitude,
+            currentLocation.longitude
+        );
+
+
+        if (!currentWeather) {
+
+            showStatus(
+                "Weather information could not be retrieved. Analysis stopped.",
+                true
+            );
+
+            return;
+        }
+    }
+
+
+    const crop =
+        document.getElementById(
+            "crop"
+        ).value;
+
+
+    const growthStage =
+        document.getElementById(
+            "growthStage"
+        ).value;
+
+
+    const soilCondition =
+        document.getElementById(
+            "soilCondition"
+        ).value;
+
+
+    const soilPH =
+        document.getElementById(
+            "soilPH"
+        ).value;
+
+
+    const irrigation =
+        document.getElementById(
+            "irrigation"
+        ).value;
+
+
+    const symptoms =
+        document.getElementById(
+            "symptoms"
+        ).value;
+
+
+    /*
+     * Form data.
+     */
+    const formData =
+        new FormData();
+
+
+    formData.append(
+        "image",
+        selectedFile
+    );
+
+
+    formData.append(
+        "crop",
+        crop
+    );
+
+
+    formData.append(
+        "growth_stage",
+        growthStage
+    );
+
+
+    formData.append(
+        "soil_condition",
+        soilCondition
+    );
+
+
+    formData.append(
+        "soil_ph",
+        soilPH
+    );
+
+
+    formData.append(
+        "irrigation",
+        irrigation
+    );
+
+
+    formData.append(
+        "visible_symptoms",
+        symptoms
+    );
+
+
+    /*
+     * REAL-TIME WEATHER
+     */
+    formData.append(
+        "temperature",
+        currentWeather.temperature ?? ""
+    );
+
+
+    formData.append(
+        "humidity",
+        currentWeather.humidity ?? ""
+    );
+
+
+    formData.append(
+        "recent_rainfall",
+        currentWeather.recent_rainfall ?? ""
+    );
+
+
+    formData.append(
+        "weather_condition",
+        currentWeather.condition ?? ""
+    );
+
+
+    formData.append(
+        "wind_speed",
+        currentWeather.wind_speed ?? ""
+    );
+
+
+    /*
+     * LOCATION
+     */
+    formData.append(
+        "latitude",
+        currentLocation.latitude
+    );
+
+
+    formData.append(
+        "longitude",
+        currentLocation.longitude
+    );
+
+
+    formData.append(
+        "location",
+        `${currentLocation.latitude}, ${currentLocation.longitude}`
+    );
+
+
+    /*
+     * UI
+     */
+    document.getElementById(
+        "loading"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "result"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "analyzeButton"
+    ).disabled =
+        true;
+
+
+    showStatus(
+        "Analyzing crop using AI + real-time environmental context...",
+        false
+    );
+
+
+    try {
+
+        /*
+         * Check API.
+         */
+        const statusResponse =
+            await fetch(
+                `${API_URL}/api/status`,
+                {
+                    method:
+                        "GET",
+
+                    cache:
+                        "no-store"
+                }
+            );
+
+
+        if (!statusResponse.ok) {
+
+            throw new Error(
+                "AI API is not available."
+            );
+        }
+
+
+        /*
+         * Prediction.
+         */
+        const response =
+            await fetch(
+                `${API_URL}/api/predict`,
+                {
+
+                    method:
+                        "POST",
+
+                    body:
+                        formData
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "Prediction response:",
+            data
+        );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "Prediction failed."
+            );
+        }
+
+
+        lastPrediction =
+            data;
+
+
+        /*
+         * Display everything.
+         */
+        displayPrediction(
+            data
+        );
+
+
+        document.getElementById(
+            "result"
+        ).style.display =
+            "block";
+
+
+        showStatus(
+            "Crop analysis completed. Results and recommendations are shown below.",
+            false
+        );
+
+
+    }
+    catch(error) {
+
+        console.error(
+            "Prediction error:",
+            error
+        );
+
+
+        showStatus(
+            "Prediction failed: " +
+            error.message,
+            true
+        );
+
+    }
+    finally {
+
+        document.getElementById(
+            "loading"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "analyzeButton"
+        ).disabled =
+            false;
+    }
+
+}
+
+
+
+/* =========================================================
+   DISPLAY PREDICTION
+========================================================= */
+
+function displayPrediction(data) {
+
+    const prediction =
+        data.prediction ||
+        {};
+
+
+    const recommendations =
+        data.recommendations ||
+        {};
+
+
+    const disease =
+        prediction.disease ||
+        {};
+
+
+    /*
+     * -------------------------------------------------------
+     * CROP
+     * -------------------------------------------------------
+     */
+
+    document.getElementById(
+        "resultCrop"
+    ).innerText =
+        prediction.crop ||
+        data.crop ||
+        "Unknown";
+
+
+    /*
+     * -------------------------------------------------------
+     * DISEASE
+     * -------------------------------------------------------
+     */
+
+    document.getElementById(
+        "diseaseName"
+    ).innerText =
+        disease.name ||
+        disease.raw_prediction ||
+        "Uncertain";
+
+
+    document.getElementById(
+        "diseaseStatus"
+    ).innerText =
+        disease.status ||
+        disease.message ||
+        "Assessment available";
+
+
+    /*
+     * -------------------------------------------------------
+     * CONFIDENCE
+     * -------------------------------------------------------
+     */
+
+    const confidence =
+        disease.confidence_percent ??
+        prediction.overall_confidence_percent ??
+        0;
+
+
+    document.getElementById(
+        "confidence"
+    ).innerText =
+        Number(
+            confidence
+        ).toFixed(2) +
+        "%";
+
+
+    document.getElementById(
+        "confidenceLevel"
+    ).innerText =
+        disease.confidence_level ||
+        "Unknown";
+
+
+    /*
+     * -------------------------------------------------------
+     * ASSESSMENT
+     * -------------------------------------------------------
+     */
+
+    const overall =
+        recommendations.overall ||
+        {};
+
+
+    const assessment =
+        recommendations.assessment ||
+        {};
+
+
+    const status =
+        prediction.status ||
+        overall.status ||
+        assessment.status ||
+        "Assessment completed";
+
+
+    const statusElement =
+        document.getElementById(
+            "assessmentStatus"
+        );
+
+
+    statusElement.innerText =
+        status;
+
+
+    /*
+     * Context
+     */
+    const context =
+        data.context ||
+        prediction.context ||
+        recommendations.context ||
+        {};
+
+
+    /*
+     * IMPORTANT:
+     *
+     * If backend context does not contain
+     * weather, use currentWeather.
+     */
+
+    const temperature =
+        context.temperature ??
+        currentWeather?.temperature ??
+        null;
+
+
+    const humidity =
+        context.humidity ??
+        currentWeather?.humidity ??
+        null;
+
+
+    const rainfall =
+        context.recent_rainfall ??
+        currentWeather?.recent_rainfall ??
+        null;
+
+
+    const condition =
+        context.weather_condition ??
+        currentWeather?.condition ??
+        "--";
+
+
+    const wind =
+        context.wind_speed ??
+        currentWeather?.wind_speed ??
+        null;
+
+
+    /*
+     * -------------------------------------------------------
+     * CONTEXT DISPLAY
+     * -------------------------------------------------------
+     */
+
+    document.getElementById(
+        "resultTemperature"
+    ).innerText =
+        temperature !== null
+            ? Number(
+                temperature
+              ).toFixed(1) +
+              " °C"
+            : "--";
+
+
+    document.getElementById(
+        "resultHumidity"
+    ).innerText =
+        humidity !== null
+            ? Number(
+                humidity
+              ).toFixed(0) +
+              " %"
+            : "--";
+
+
+    document.getElementById(
+        "resultRainfall"
+    ).innerText =
+        rainfall ||
+        "--";
+
+
+    document.getElementById(
+        "resultSoil"
+    ).innerText =
+        context.soil_condition ||
+        document.getElementById(
+            "soilCondition"
+        ).value ||
+        "--";
+
+
+    document.getElementById(
+        "resultPH"
+    ).innerText =
+        context.soil_ph ??
+        document.getElementById(
+            "soilPH"
+        ).value ||
+        "--";
+
+
+    document.getElementById(
+        "resultGrowth"
+    ).innerText =
+        context.growth_stage ||
+        document.getElementById(
+            "growthStage"
+        ).value ||
+        "--";
+
+
+    document.getElementById(
+        "resultLocation"
+    ).innerText =
+        context.location ||
+        (
+            currentLocation
+                ? `${currentLocation.latitude}, ${currentLocation.longitude}`
+                : "--"
+        );
+
+
+    document.getElementById(
+        "resultIrrigation"
+    ).innerText =
+        context.irrigation ||
+        document.getElementById(
+            "irrigation"
+        ).value ||
+        "--";
+
+
+    document.getElementById(
+        "resultCondition"
+    ).innerText =
+        condition;
+
+
+    /*
+     * -------------------------------------------------------
+     * RECOMMENDATION ASSESSMENT
+     * -------------------------------------------------------
+     */
+
+    const assessmentBox =
+        document.getElementById(
+            "recommendationAssessment"
+        );
+
+
+    const assessmentSummary =
+        assessment.summary ||
+        overall.message ||
+        disease.message ||
+        "AI assessment completed.";
+
+
+    const assessmentConfidence =
+        assessment.confidence_percent ??
+        overall.confidence_percent ??
+        confidence;
+
+
+    assessmentBox.innerHTML = `
+
+        <strong>
+            ${escapeHTML(
+                assessment.status ||
+                overall.status ||
+                "Assessment"
+            )}
+        </strong>
+
+        <p style="margin-top:10px;">
+            ${escapeHTML(
+                assessmentSummary
+            )}
+        </p>
+
+        <p style="margin-top:10px;">
+            <strong>
+                Visual AI confidence:
+            </strong>
+
+            ${Number(
+                assessmentConfidence
+            ).toFixed(2)}%
+        </p>
+
+        <p style="margin-top:8px;">
+            <strong>
+                Context available:
+            </strong>
+
+            ${
+                recommendations
+                    .context_analysis
+                    ?.available
+                    ? "Yes"
+                    : "Partial"
+            }
+        </p>
+
+    `;
+
+
+    /*
+     * -------------------------------------------------------
+     * CONTEXT USED
+     * -------------------------------------------------------
+     */
+
+    const contextBox =
+        document.getElementById(
+            "recommendationContext"
+        );
+
+
+    const contextAnalysis =
+        recommendations.context_analysis ||
+        {};
+
+
+    const evidenceCount =
+        contextAnalysis.evidence_count ??
+        "--";
+
+
+    const missingInformation =
+        contextAnalysis.missing_information ||
+        [];
+
+
+    contextBox.innerHTML = `
+
+        <strong>
+            🌍 Environmental Context Used
+        </strong>
+
+        <p style="margin-top:10px;">
+            Temperature:
+            <strong>
+                ${
+                    temperature !== null
+                        ? Number(
+                            temperature
+                          ).toFixed(1) +
+                          " °C"
+                        : "--"
+                }
+            </strong>
+        </p>
+
+        <p>
+            Humidity:
+            <strong>
+                ${
+                    humidity !== null
+                        ? Number(
+                            humidity
+                          ).toFixed(0) +
+                          " %"
+                        : "--"
+                }
+            </strong>
+        </p>
+
+        <p>
+            Rainfall:
+            <strong>
+                ${escapeHTML(
+                    String(
+                        rainfall || "--"
+                    )
+                )}
+            </strong>
+        </p>
+
+        <p>
+            Weather:
+            <strong>
+                ${escapeHTML(
+                    String(
+                        condition || "--"
+                    )
+                )}
+            </strong>
+        </p>
+
+        <p>
+            Wind:
+            <strong>
+                ${
+                    wind !== null
+                        ? Number(
+                            wind
+                          ).toFixed(1) +
+                          " km/h"
+                        : "--"
+                }
+            </strong>
+        </p>
+
+        <p>
+            Soil:
+            <strong>
+                ${escapeHTML(
+                    String(
+                        context.soil_condition ||
+                        "--"
+                    )
+                )}
+            </strong>
+        </p>
+
+        <p>
+            Soil pH:
+            <strong>
+                ${escapeHTML(
+                    String(
+                        context.soil_ph ??
+                        document.getElementById(
+                            "soilPH"
+                        ).value ||
+                        "--"
+                    )
+                )}
+            </strong>
+        </p>
+
+        <p>
+            Evidence fields:
+            <strong>
+                ${evidenceCount}
+            </strong>
+        </p>
+
+        ${
+            missingInformation.length > 0
+
+                ? `
+                    <p style="margin-top:8px;">
+                        Missing information:
+                        <strong>
+                            ${escapeHTML(
+                                missingInformation.join(
+                                    ", "
+                                )
+                            )}
+                        </strong>
+                    </p>
+                  `
+
+                : `
+                    <p style="margin-top:8px;">
+                        ✅ No major context fields missing.
+                    </p>
+                  `
+        }
+
+    `;
+
+
+    /*
+     * -------------------------------------------------------
+     * RECOMMENDATION LIST
+     * -------------------------------------------------------
+     */
+
+    const list =
+        document.getElementById(
+            "recommendationList"
+        );
+
+
+    list.innerHTML =
+        "";
+
+
+    const recommendationItems =
+        recommendations.recommendations ||
+        [];
+
+
+    if (
+        recommendationItems.length ===
+        0
+    ) {
+
+        const li =
+            document.createElement(
+                "li"
+            );
+
+
+        li.innerText =
+            "No specific recommendations were returned by the recommendation engine.";
+
+
+        list.appendChild(
+            li
+        );
+
+    }
+    else {
+
+        recommendationItems.forEach(
+            function(item) {
+
+                const li =
+                    document.createElement(
+                        "li"
+                    );
+
+
+                li.innerText =
+                    item;
+
+
+                list.appendChild(
+                    li
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   DIGITAL TWIN
+========================================================= */
+
+function createDigitalTwin() {
+
+    if (!lastPrediction) {
+
+        showStatus(
+            "Analyze a crop before creating its digital twin.",
+            true
+        );
+
+        return;
+    }
+
+
+    const prediction =
+        lastPrediction.prediction ||
+        {};
+
+
+    const disease =
+        prediction.disease ||
+        {};
+
+
+    const context =
+        lastPrediction.context ||
+        prediction.context ||
+        {};
+
+
+    const crop =
+        prediction.crop ||
+        lastPrediction.crop ||
+        "Unknown";
+
+
+    const twinId =
+        crop
+            .toUpperCase()
+            .replace(
+                /\s+/g,
+                "_"
+            ) +
+        "_" +
+        Date.now();
+
+
+    const twin = {
+
+        crop_id:
+            twinId,
+
+        crop:
+            crop,
+
+        created_at:
+            new Date().toISOString(),
+
+
+        /*
+         * AI observation
+         */
+        disease: {
+
+            name:
+                disease.name ||
+                disease.raw_prediction ||
+                "Uncertain",
+
+            confidence:
+                disease.confidence_percent ??
+                prediction.overall_confidence_percent ??
+                0,
+
+            confidence_level:
+                disease.confidence_level ||
+                "Unknown"
+        },
+
+
+        /*
+         * Environment
+         */
+        environment: {
+
+            temperature:
+                context.temperature ??
+                currentWeather?.temperature ??
+                null,
+
+            humidity:
+                context.humidity ??
+                currentWeather?.humidity ??
+                null,
+
+            rainfall:
+                context.recent_rainfall ??
+                currentWeather?.recent_rainfall ??
+                null,
+
+            weather_condition:
+                context.weather_condition ??
+                currentWeather?.condition ??
+                null,
+
+            wind_speed:
+                context.wind_speed ??
+                currentWeather?.wind_speed ??
+                null,
+
+            soil_condition:
+                context.soil_condition ||
+                document.getElementById(
+                    "soilCondition"
+                ).value,
+
+            soil_ph:
+                context.soil_ph ??
+                document.getElementById(
+                    "soilPH"
+                ).value,
+
+            irrigation:
+                context.irrigation ||
+                document.getElementById(
+                    "irrigation"
+                ).value,
+
+            growth_stage:
+                context.growth_stage ||
+                document.getElementById(
+                    "growthStage"
+                ).value
+        },
+
+
+        /*
+         * Location
+         */
+        location: {
+
+            latitude:
+                currentLocation?.latitude ??
+                null,
+
+            longitude:
+                currentLocation?.longitude ??
+                null
+        },
+
+
+        /*
+         * Input
+         */
+        input: {
+
+            filename:
+                selectedFile?.name ||
+                null,
+
+            type:
+                selectedFile?.type ||
+                null
+        }
+
+    };
+
+
+    /*
+     * Save.
+     */
+    localStorage.setItem(
+        "cropDigitalTwin",
+        JSON.stringify(
+            twin,
+            null,
+            2
+        )
+    );
+
+
+    /*
+     * Display.
+     */
+    const digitalTwin =
+        document.getElementById(
+            "digitalTwin"
+        );
+
+
+    digitalTwin.innerHTML = `
+
+        <div
+            class="result-box success-box"
+        >
+
+            <h3>
+                ✅ Digital Twin Created
+            </h3>
+
+
+            <p style="margin-top:10px;">
+                <strong>
+                    Crop:
+                </strong>
+
+                ${escapeHTML(
+                    twin.crop
+                )}
+            </p>
+
+
+            <p>
+                <strong>
+                    Crop ID:
+                </strong>
+
+                ${escapeHTML(
+                    twin.crop_id
+                )}
+            </p>
+
+
+            <p>
+                <strong>
+                    Disease Observation:
+                </strong>
+
+                ${escapeHTML(
+                    twin.disease.name
+                )}
+            </p>
+
+
+            <p>
+                <strong>
+                    Confidence:
+                </strong>
+
+                ${Number(
+                    twin.disease.confidence
+                ).toFixed(2)}%
+            </p>
+
+
+            <hr
+                style="
+                    margin:15px 0;
+                    border:0;
+                    border-top:1px solid #bbf7d0;
+                "
+            >
+
+
+            <h4>
+                Environmental State
+            </h4>
+
+
+            <p>
+                Temperature:
+                ${twin.environment.temperature ?? "--"} °C
+            </p>
+
+
+            <p>
+                Humidity:
+                ${twin.environment.humidity ?? "--"} %
+            </p>
+
+
+            <p>
+                Rainfall:
+                ${escapeHTML(
+                    String(
+                        twin.environment.rainfall ??
+                        "--"
+                    )
+                )}
+            </p>
+
+
+            <p>
+                Weather:
+                ${escapeHTML(
+                    String(
+                        twin.environment.weather_condition ??
+                        "--"
+                    )
+                )}
+            </p>
+
+
+            <p>
+                Soil:
+                ${escapeHTML(
+                    String(
+                        twin.environment.soil_condition ??
+                        "--"
+                    )
+                )}
+            </p>
+
+
+            <p>
+                Soil pH:
+                ${twin.environment.soil_ph ?? "--"}
+            </p>
+
+
+            <p>
+                Irrigation:
+                ${escapeHTML(
+                    String(
+                        twin.environment.irrigation ??
+                        "--"
+                    )
+                )}
+            </p>
+
+
+            <p>
+                Growth Stage:
+                ${escapeHTML(
+                    String(
+                        twin.environment.growth_stage ??
+                        "--"
+                    )
+                )}
+            </p>
+
+        </div>
+
+
+        <button
+            class="secondary"
+            onclick="downloadDigitalTwin()"
+        >
+
+            💾 Export Digital Twin JSON
+
+        </button>
+
+    `;
+
+
+    showStatus(
+        "Digital twin created successfully.",
+        false
+    );
+
+}
+
+
+
+/* =========================================================
+   DOWNLOAD DIGITAL TWIN
+========================================================= */
+
+function downloadDigitalTwin() {
+
+    const data =
+        localStorage.getItem(
+            "cropDigitalTwin"
+        );
+
+
+    if (!data) {
+
+        showStatus(
+            "No digital twin available.",
+            true
+        );
+
+        return;
+    }
+
+
+    const blob =
+        new Blob(
+            [data],
+            {
+                type:
+                    "application/json"
+            }
+        );
+
+
+    const url =
+        URL.createObjectURL(
+            blob
+        );
+
+
+    const a =
+        document.createElement(
+            "a"
+        );
+
+
+    a.href =
+        url;
+
+
+    a.download =
+        "crop_digital_twin.json";
+
+
+    document.body.appendChild(
+        a
+    );
+
+
+    a.click();
+
+
+    document.body.removeChild(
+        a
+    );
+
+
+    URL.revokeObjectURL(
+        url
+    );
+
+}
+
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+function showStatus(
+    message,
+    error = false
+) {
+
+    const status =
+        document.getElementById(
+            "status"
+        );
+
+
+    status.innerText =
+        message;
+
+
+    status.style.display =
+        "block";
+
+
+    status.style.background =
+        error
+            ? "#fee2e2"
+            : "#f0fdf4";
+
+
+    status.style.color =
+        error
+            ? "#991b1b"
+            : "#166534";
+
+}
+
+
+
+/* =========================================================
+   HTML ESCAPE
+========================================================= */
+
+function escapeHTML(value) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        value;
+
+
+    return div.innerHTML;
+}
+
+
+</script>
+
+
+</body>
+
+</html>

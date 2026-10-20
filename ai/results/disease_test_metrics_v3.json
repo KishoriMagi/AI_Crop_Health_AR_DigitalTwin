@@ -1,0 +1,14 @@
+{
+    "model": "EfficientNetV2-S Disease V3",
+    "test_images": 9395,
+    "num_classes": 36,
+    "test_accuracy": 0.9199,
+    "macro_precision": 0.7439,
+    "macro_recall": 0.8277,
+    "macro_f1": 0.771,
+    "weighted_precision": 0.9452,
+    "weighted_recall": 0.9199,
+    "weighted_f1": 0.9284,
+    "vs_v2_accuracy_delta": 0.0423,
+    "vs_v2_macro_f1_delta": 0.0578
+}
